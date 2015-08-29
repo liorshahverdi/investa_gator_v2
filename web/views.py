@@ -18,6 +18,10 @@ def index():
 def index2():
     return render_template("index2.html")
 
+@app.route("/face_rec_index", methods=["GET","POST"])
+def face_rec_index():
+    return render_template("face_rec_index.html")
+
 @app.route("/run",methods=["GET","POST"])
 def run():
     data = scraper.scrape(links=["http://www.backpage.com"])
